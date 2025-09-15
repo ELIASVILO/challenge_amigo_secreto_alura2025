@@ -1,20 +1,20 @@
-const entradaAmigo = document.getElementById("amigo"); //variable referencia entrada texto
+const inAmigo = document.getElementById("amigo"); //variable referencia entrada texto
 const listaAmigos = []; //array guardar nombres en lista
 const ulListaAmigos = document.getElementById("listaAmigos"); //variable relaciona elemento en el html lista "ul"
 const ulResultado = document.getElementById("resultado"); //variable para publicar resultado
 
 //funcion agregar nombres, esta relacionado con el boton añadir al hacer click
 function agregarAmigo() {
-    if (!entradaAmigo.value){ //operador de negacion alerta por añadir dato vacio
+    if (!inAmigo.value){ //operador de negacion alerta por añadir dato vacio
         alert("Debes ingresar un nombre");
         return; // Detiene la ejecución si el campo está vacío
     }
     
-    listaAmigos.push(entradaAmigo.value); //añadiendo nombres al array
-    ulListaAmigos.innerHTML += `<li>${entradaAmigo.value} </li>`; //ordena en forma de lista, se usa el template string para combinar datos con codigo
+    listaAmigos.push(inAmigo.value); //añadiendo nombres al array
+    ulListaAmigos.innerHTML += `<li>${inAmigo.value} </li>`; //ordena en forma de lista, se usa el template string para combinar datos con codigo
 
     // limpiar el campo de texto
-    entradaAmigo.value = '';
+    inAmigo.value = '';
 }
 //funcion de sorteo
 function sortearAmigo(){
